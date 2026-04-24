@@ -51,6 +51,18 @@ body{background:var(--black);color:var(--white);font-family:'Noto Serif JP',seri
 .lang-dropdown a .lang-native{font-size:.58rem;color:var(--muted);}
 .lang-dropdown a.active .lang-native{color:var(--gold-d);}
 
+
+/* PAYMENT */
+.payment-block{border-top:1px solid rgba(201,168,76,.12);padding-top:32px;}
+.payment-title{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
+.payment-group{margin-bottom:20px;}
+.payment-group-label{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.18em;color:rgba(242,237,228,.35);text-transform:uppercase;margin-bottom:10px;}
+.pay-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.pay-chip{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:.72rem;color:rgba(242,237,228,.7);white-space:nowrap;}
+.pay-chip-text{color:rgba(242,237,228,.5);font-size:.68rem;}
+.pay-icon{width:18px;height:18px;object-fit:contain;flex-shrink:0;}
+@media(max-width:768px){.pay-chip{padding:5px 10px;font-size:.68rem;}.pay-icon{width:16px;height:16px;}}
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s;}
 nav.solid{background:rgba(6,6,6,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.1);}
@@ -557,18 +569,18 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
         <div style="background:linear-gradient(135deg,rgba(201,168,76,.08),var(--d2));border:1px solid rgba(201,168,76,.3);padding:24px 20px;text-align:center;">
           <div style="font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.2em;color:rgba(242,237,228,.5);margin-bottom:10px;text-transform:uppercase;">1 Person</div>
           <div style="display:flex;align-items:baseline;justify-content:center;gap:2px;">
-            <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--gold);line-height:1;">¥4,100</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--gold);line-height:1;">¥4,000</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:var(--gold);">〜</span>
           </div>
-          <div style="font-size:.72rem;color:rgba(242,237,228,.5);margin-top:10px;line-height:1.8;border-top:1px solid rgba(201,168,76,.12);padding-top:10px;">Table charge ¥800<br>＋ Shisha ¥2,500<br>＋ Drink ¥800〜</div>
+          <div style="font-size:.72rem;color:rgba(242,237,228,.5);margin-top:10px;line-height:1.8;border-top:1px solid rgba(201,168,76,.12);padding-top:10px;">Table charge ¥800<br>＋ Shisha ¥2,500<br>＋ Drink ¥700〜</div>
         </div>
         <div style="background:linear-gradient(135deg,rgba(201,168,76,.08),var(--d2));border:1px solid rgba(201,168,76,.3);padding:24px 20px;text-align:center;">
           <div style="font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.2em;color:rgba(242,237,228,.5);margin-bottom:10px;text-transform:uppercase;">2 Persons (Shared)</div>
           <div style="display:flex;align-items:baseline;justify-content:center;gap:2px;">
-            <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--gold);line-height:1;">¥2,450</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--gold);line-height:1;">¥3,150</span>
             <span style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:var(--gold);">〜 / person</span>
           </div>
-          <div style="font-size:.72rem;color:rgba(242,237,228,.5);margin-top:10px;line-height:1.8;border-top:1px solid rgba(201,168,76,.12);padding-top:10px;">Share fee ＋¥800<br>Total ¥4,900〜<br>Per person ¥2,450〜</div>
+          <div style="font-size:.72rem;color:rgba(242,237,228,.5);margin-top:10px;line-height:1.8;border-top:1px solid rgba(201,168,76,.12);padding-top:10px;">Table charge ¥800/person<br>＋ Shisha ¥2,500<br>＋ Share fee ¥800<br>＋ Drink ¥700〜/person<br>Total for 2: ¥6,300〜</div>
         </div>
       </div>
     </div>
@@ -947,37 +959,37 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
         <div class="feat-slide">
           <div class="feat-card">
             <div class="feat-card-header"><span class="feat-icon">🤝</span><div class="feat-title">Beginners Welcome</div></div>
-            <p class="feat-text">Never tried shisha? Our staff will guide you through everything — from choosing a flavour to proper technique.</p>
+            <p class="feat-text">Never tried shisha?<br>Our staff will guide you through everything —<br>from choosing a flavour to proper technique.</p>
           </div>
         </div>
         <div class="feat-slide">
           <div class="feat-card">
             <div class="feat-card-header"><span class="feat-icon">🏙️</span><div class="feat-title">Great Location</div></div>
-            <p class="feat-text">7 min walk from Sakae Station. Perfect for a nightcap or a second stop. Private bookings available.</p>
+            <p class="feat-text">7 min walk from Sakae Station.<br>Perfect for a nightcap or a second stop.<br>Private bookings available.</p>
           </div>
         </div>
         <div class="feat-slide">
           <div class="feat-card">
             <div class="feat-card-header"><span class="feat-icon">🪨</span><div class="feat-title">Coal Management</div></div>
-            <p class="feat-text">Regular coal changes keep every session at peak flavour and cloud production.<br>&nbsp;</p>
+            <p class="feat-text">Regular coal changes keep every session<br>at peak flavour and cloud production.<br>&nbsp;</p>
           </div>
         </div>
         <div class="feat-slide">
           <div class="feat-card">
             <div class="feat-card-header"><span class="feat-icon">🫧</span><div class="feat-title">Equipment Care</div></div>
-            <p class="feat-text">Every pipe is thoroughly cleaned after each use — hygiene is our top priority.</p>
+            <p class="feat-text">Every pipe is thoroughly cleaned after each use —<br>hygiene is our top priority.</p>
           </div>
         </div>
         <div class="feat-slide">
           <div class="feat-card">
             <div class="feat-card-header"><span class="feat-icon">🌿</span><div class="feat-title">Nicotine-Free Options</div></div>
-            <p class="feat-text">We carry nicotine-free De Cloud flavours so even non-smokers can enjoy the full experience.</p>
+            <p class="feat-text">We carry nicotine-free De Cloud flavours<br>so even non-smokers can enjoy the full experience.</p>
           </div>
         </div>
         <div class="feat-slide">
           <div class="feat-card">
             <div class="feat-card-header"><span class="feat-icon">🍹</span><div class="feat-title">Extensive Drink Menu</div></div>
-            <p class="feat-text">From whisky and cocktails to champagne and non-alcoholic options. All-you-can-drink courses available.</p>
+            <p class="feat-text">From whisky and cocktails to champagne<br>and non-alcoholic options.<br>All-you-can-drink courses available.</p>
           </div>
         </div>
       </div>
@@ -1058,6 +1070,23 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
           ・No outside food or beverages<br>
           ・No sleeping (fire and burn prevention)
         </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="payment-block rv" style="margin-top:40px;">
+      <h3 class="payment-title">Payment Methods</h3>
+      <div class="payment-group">
+        <div class="payment-group-label">Credit Card</div>
+        <div class="pay-chips"><div class="pay-chip"><img src="https://cdn.simpleicons.org/visa/1A1F71" alt="VISA" class="pay-icon" loading="lazy"><span>VISA</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard" class="pay-icon" loading="lazy"><span>Mastercard</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/jcb/003087" alt="JCB" class="pay-icon" loading="lazy"><span>JCB</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/americanexpress/2E77BC" alt="American Express" class="pay-icon" loading="lazy"><span>American Express</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/dinersclub/004A97" alt="Diners Club" class="pay-icon" loading="lazy"><span>Diners Club</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/discover/FF6600" alt="Discover" class="pay-icon" loading="lazy"><span>Discover</span></div><div class="pay-chip pay-chip-text"><span>UnionPay</span></div></div>
+      </div>
+      <div class="payment-group">
+        <div class="payment-group-label">E-Money</div>
+        <div class="pay-chips"><div class="pay-chip"><img src="https://cdn.simpleicons.org/quicpay/00A0E9" alt="QUICPay" class="pay-icon" loading="lazy"><span>QUICPay</span></div><div class="pay-chip pay-chip-text"><span>Apple Pay</span></div></div>
+      </div>
+      <div class="payment-group">
+        <div class="payment-group-label">QR Code Payment</div>
+        <div class="pay-chips"><div class="pay-chip"><img src="https://cdn.simpleicons.org/paypay/FF0033" alt="PayPay" class="pay-icon" loading="lazy"><span>PayPay</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/linepay/00B900" alt="LINE Pay" class="pay-icon" loading="lazy"><span>LINE Pay</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/wechat/07C160" alt="WeChat Pay" class="pay-icon" loading="lazy"><span>WeChat Pay</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/alipay/1677FF" alt="Alipay+" class="pay-icon" loading="lazy"><span>Alipay+</span></div><div class="pay-chip pay-chip-text"><span>COIN+</span></div><div class="pay-chip pay-chip-text"><span>d Pay</span></div><div class="pay-chip pay-chip-text"><span>au PAY</span></div><div class="pay-chip pay-chip-text"><span>Rakuten Pay</span></div><div class="pay-chip pay-chip-text"><span>J-Coin Pay</span></div><div class="pay-chip pay-chip-text"><span>UnionPay QR</span></div><div class="pay-chip pay-chip-text"><span>SmartCode™</span></div></div>
       </div>
     </div>
   </div>
