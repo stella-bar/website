@@ -53,16 +53,21 @@ body{background:var(--black);color:var(--white);font-family:'Noto Serif JP',seri
 
 
 /* PAYMENT */
-.payment-block{border-top:1px solid rgba(201,168,76,.12);padding-top:32px;}
-.payment-title{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
-.payment-group{margin-bottom:20px;}
-.payment-group-label{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.18em;color:rgba(242,237,228,.35);text-transform:uppercase;margin-bottom:10px;}
+.pay-group-inline{margin-bottom:12px;}
+.pay-inline-label{font-size:.8rem;color:rgba(242,237,228,.76);display:block;margin-bottom:6px;}
 .pay-chips{display:flex;flex-wrap:wrap;gap:8px;}
 .pay-chip{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:.72rem;color:rgba(242,237,228,.7);white-space:nowrap;}
 .pay-chip-text{color:rgba(242,237,228,.5);font-size:.68rem;}
 .pay-icon{width:18px;height:18px;object-fit:contain;flex-shrink:0;}
 @media(max-width:768px){.pay-chip{padding:5px 10px;font-size:.68rem;}.pay-icon{width:16px;height:16px;}}
 
+
+/* RESERVATION FORM */
+.reserve-form-wrap{width:100%;max-width:700px;margin:0 auto 40px;background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);padding:4px;}
+.btn-reserve{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.22em;color:var(--black);background:linear-gradient(135deg,var(--gold-l),var(--gold));padding:14px 34px;border:none;cursor:pointer;text-decoration:none;text-transform:uppercase;transition:all .3s;min-width:260px;text-align:center;display:inline-block;}
+.btn-reserve:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(201,168,76,.33);}
+.btn-outline-sm{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.15em;color:rgba(201,168,76,.7);background:transparent;border:1px solid rgba(201,168,76,.3);padding:6px 14px;text-decoration:none;text-transform:uppercase;transition:all .3s;display:inline-block;margin-top:8px;}
+.btn-outline-sm:hover{color:var(--gold);border-color:var(--gold);}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s;}
 nav.solid{background:rgba(6,6,6,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.1);}
@@ -461,8 +466,8 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
     </div>
   </div>
   <div style="display:flex;gap:8px;align-items:center;">
-    <a href="https://ayakafragments.github.io/STELLA/FlavorHoroscope.html" class="nav-diag" target="_blank">水烟测试</a>
-    <a href="https://lin.ee/XyF0R493" class="nav-reserve" target="_blank">预约</a>
+    <a href="https://stella-bar.github.io/website/FlavorHoroscope.html" class="nav-diag" target="_blank">水烟测试</a>
+    <a href="https://airrsv.net/stella-bar/calendar" class="nav-reserve" target="_blank">预约</a>
   </div>
 </nav>
 
@@ -476,7 +481,7 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
     <p class="hero-sub">SHISHA BAR</p>
     <p class="hero-catch">尽享水烟与美酒<br>专属成年人的精致秘境</p>
     <div class="hero-btns">
-      <a href="https://lin.ee/XyF0R493" class="btn-gold" target="_blank">💬 预约 / 咨询</a>
+      <a href="https://airrsv.net/stella-bar/calendar" class="btn-gold" target="_blank">💬 预约 / 咨询</a>
       <button class="btn-outline" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'});">查看菜单</button>
     </div>
     <div class="hero-info">
@@ -684,7 +689,7 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
 
       <!-- FLAVOR DIAGNOSIS BUTTON -->
       <div style="text-align:center;margin:48px 0 0;">
-        <a href="https://ayakafragments.github.io/STELLA/FlavorHoroscope.html" target="_blank" class="btn-outline" style="font-size:.68rem;display:inline-block;">✦ 个性化水烟口味测试</a>
+        <a href="https://stella-bar.github.io/website/FlavorHoroscope.html" target="_blank" class="btn-outline" style="font-size:.68rem;display:inline-block;">✦ 个性化水烟口味测试</a>
       </div>
 
       <!-- RECOMMEND MIX -->
@@ -763,7 +768,7 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
                 <li style="padding-left:16px;position:relative;"><span style="position:absolute;left:0;color:var(--gold-d);">—</span>含座位费</li>
               </ul>
             </div>
-            <a href="https://lin.ee/XyF0R493" target="_blank" class="btn-gold" style="font-size:.68rem;">💬 通过LINE预约</a>
+            <a href="https://lin.ee/XyF0R493" target="_blank" class="btn-gold" style="font-size:.68rem;">💬 LINE</a>
           </div>
         </div>
       </div>
@@ -1054,6 +1059,20 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
           <tr><td>座位数</td><td>14席</td></tr>
           <tr><td>包场</td><td>可（需预约）</td></tr>
           <tr><td>停车场</td><td>无（附近有收费停车场）</td></tr>
+          <tr><td style="vertical-align:top;padding-top:15px;">支付方式</td><td style="vertical-align:top;padding-top:15px;">
+              <div class="pay-group-inline">
+                <span class="pay-inline-label">信用卡</span>
+                <div class="pay-chips"><div class="pay-chip"><img src="https://cdn.simpleicons.org/visa/1A1F71" alt="VISA" class="pay-icon" loading="lazy"><span>VISA</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard" class="pay-icon" loading="lazy"><span>Mastercard</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/jcb/003087" alt="JCB" class="pay-icon" loading="lazy"><span>JCB</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/americanexpress/2E77BC" alt="American Express" class="pay-icon" loading="lazy"><span>American Express</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/dinersclub/004A97" alt="Diners Club" class="pay-icon" loading="lazy"><span>Diners Club</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/discover/FF6600" alt="Discover" class="pay-icon" loading="lazy"><span>Discover</span></div><div class="pay-chip pay-chip-text"><span>银联</span></div></div>
+              </div>
+              <div class="pay-group-inline">
+                <span class="pay-inline-label">电子货币</span>
+                <div class="pay-chips"><div class="pay-chip pay-chip-text"><span>QUICPay</span></div><div class="pay-chip pay-chip-text"><span>Apple Pay</span></div></div>
+              </div>
+              <div class="pay-group-inline">
+                <span class="pay-inline-label">二维码支付</span>
+                <div class="pay-chips"><div class="pay-chip pay-chip-text"><span>PayPay</span></div><div class="pay-chip pay-chip-text"><span>LINE Pay</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/wechat/07C160" alt="WeChat Pay" class="pay-icon" loading="lazy"><span>WeChat Pay</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/alipay/1677FF" alt="Alipay+" class="pay-icon" loading="lazy"><span>Alipay+</span></div><div class="pay-chip pay-chip-text"><span>COIN+</span></div><div class="pay-chip pay-chip-text"><span>d支付</span></div><div class="pay-chip pay-chip-text"><span>au PAY</span></div><div class="pay-chip pay-chip-text"><span>乐天支付</span></div><div class="pay-chip pay-chip-text"><span>J-Coin Pay</span></div><div class="pay-chip pay-chip-text"><span>银联QR</span></div><div class="pay-chip pay-chip-text"><span>SmartCode™</span></div></div>
+              </div>
+            </td></tr>
         </table>
       </div>
       <div class="access-vline"></div>
@@ -1072,23 +1091,6 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
         </div>
       </div>
     </div>
-
-    <!-- PAYMENT -->
-    <div class="payment-block rv" style="margin-top:40px;">
-      <h3 class="payment-title">支付方式</h3>
-      <div class="payment-group">
-        <div class="payment-group-label">信用卡</div>
-        <div class="pay-chips"><div class="pay-chip"><img src="https://cdn.simpleicons.org/visa/1A1F71" alt="VISA" class="pay-icon" loading="lazy"><span>VISA</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard" class="pay-icon" loading="lazy"><span>Mastercard</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/jcb/003087" alt="JCB" class="pay-icon" loading="lazy"><span>JCB</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/americanexpress/2E77BC" alt="American Express" class="pay-icon" loading="lazy"><span>American Express</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/dinersclub/004A97" alt="Diners Club" class="pay-icon" loading="lazy"><span>Diners Club</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/discover/FF6600" alt="Discover" class="pay-icon" loading="lazy"><span>Discover</span></div><div class="pay-chip pay-chip-text"><span>银联</span></div></div>
-      </div>
-      <div class="payment-group">
-        <div class="payment-group-label">电子货币</div>
-        <div class="pay-chips"><div class="pay-chip pay-chip-text"><span>QUICPay</span></div><div class="pay-chip pay-chip-text"><span>Apple Pay</span></div></div>
-      </div>
-      <div class="payment-group">
-        <div class="payment-group-label">二维码支付</div>
-        <div class="pay-chips"><div class="pay-chip pay-chip-text"><span>PayPay</span></div><div class="pay-chip pay-chip-text"><span>LINE Pay</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/wechat/07C160" alt="WeChat Pay" class="pay-icon" loading="lazy"><span>WeChat Pay</span></div><div class="pay-chip"><img src="https://cdn.simpleicons.org/alipay/1677FF" alt="Alipay+" class="pay-icon" loading="lazy"><span>Alipay+</span></div><div class="pay-chip pay-chip-text"><span>COIN+</span></div><div class="pay-chip pay-chip-text"><span>d Pay</span></div><div class="pay-chip pay-chip-text"><span>au PAY</span></div><div class="pay-chip pay-chip-text"><span>乐天支付</span></div><div class="pay-chip pay-chip-text"><span>J-Coin Pay</span></div><div class="pay-chip pay-chip-text"><span>UnionPay QR</span></div><div class="pay-chip pay-chip-text"><span>SmartCode™</span></div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1100,10 +1102,13 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
     <div class="cta-inner rv">
       <h2 class="cta-title">预约 / 咨询</h2>
       <p class="cta-sub">Reserve / Contact</p>
-      <div class="cta-btns">
-        <a href="https://lin.ee/XyF0R493" class="btn-gold" style="font-size:.7rem;" target="_blank">💬 通过LINE预约</a>
+      <!-- RESERVATION FORM -->
+      <div class="reserve-form-wrap rv">
+        <iframe type="text/html" frameborder="0" width="100%" height="1000px" src="//airrsv.net/stella-bar/calendar/embed/" style="border:none;display:block;"></iframe>
+        <div style="text-align:right;font-size:10px;color:#888;margin:10px 0 0 0;line-height:160%;">このページは<a style="color:#888;text-decoration:underline;" href="https://airregi.jp/reserve/?vos=otrsvxototzzx00000099" target="_blank">予約システム『Airリザーブ』<img src="https://cdn.airrsv.net/img/icon/open_link_black.svg" style="margin:2px 2px 4px;vertical-align:top;"></a>が提供しています</div>
       </div>
       <div class="cta-links">
+        <a href="https://lin.ee/XyF0R493" class="btn-gold" target="_blank" style="font-size:.7rem;text-align:center;display:block;">💬 LINE</a>
         <a href="https://www.instagram.com/bar._.stella?igsh=bmJlODZtZ3Bjamxl" class="btn-gold" target="_blank" style="font-size:.7rem;text-align:center;display:block;">📸 Instagram</a>
       </div>
     </div>
