@@ -27,8 +27,9 @@ body{background:var(--black);color:var(--white);font-family:'Noto Serif JP',seri
   display:flex;align-items:center;gap:5px;
   font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.1em;
   color:rgba(242,237,228,.6);background:transparent;
-  border:1px solid rgba(201,168,76,.3);padding:8px 12px;
+  border:1px solid rgba(201,168,76,.3);padding:0 12px;
   cursor:pointer;transition:all .3s;white-space:nowrap;
+  height:38px;box-sizing:border-box;
 }
 .lang-globe-btn:hover{color:var(--gold);border-color:var(--gold);background:rgba(201,168,76,.08);}
 .lang-globe-btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.5;flex-shrink:0;}
@@ -68,6 +69,65 @@ body{background:var(--black);color:var(--white);font-family:'Noto Serif JP',seri
 .btn-reserve:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(201,168,76,.33);}
 .btn-outline-sm{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.15em;color:rgba(201,168,76,.7);background:transparent;border:1px solid rgba(201,168,76,.3);padding:6px 14px;text-decoration:none;text-transform:uppercase;transition:all .3s;display:inline-block;margin-top:8px;}
 .btn-outline-sm:hover{color:var(--gold);border-color:var(--gold);}
+
+/* DIAGNOSIS CARD */
+.diag-card-wrap{width:100%;display:flex;justify-content:center;padding:0 20px;margin-top:-28px;position:relative;z-index:10;}
+.diag-card{
+  display:flex;align-items:center;gap:18px;
+  background:linear-gradient(135deg,rgba(14,12,22,.96) 0%,rgba(24,18,42,.96) 100%);
+  border:1px solid rgba(201,168,76,.35);
+  padding:20px 28px;max-width:560px;width:100%;
+  text-decoration:none;cursor:pointer;
+  box-shadow:0 8px 40px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,76,.08);
+  transition:all .4s ease;position:relative;overflow:hidden;
+}
+.diag-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at top left,rgba(201,168,76,.08) 0%,transparent 60%);
+  pointer-events:none;
+}
+.diag-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 50px rgba(0,0,0,.6),0 0 24px rgba(201,168,76,.15);
+  border-color:rgba(201,168,76,.6);
+}
+.diag-card-icon{
+  font-size:2rem;flex-shrink:0;
+  animation:diag-pulse 3s ease-in-out infinite;
+}
+@keyframes diag-pulse{
+  0%,100%{transform:scale(1);opacity:.9;}
+  50%{transform:scale(1.08);opacity:1;}
+}
+.diag-card-body{flex:1;}
+.diag-card-label{
+  font-family:'Cinzel',serif;font-size:.48rem;letter-spacing:.25em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:5px;
+}
+.diag-card-title{
+  font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;
+  color:rgba(242,237,228,.92);letter-spacing:.06em;line-height:1.4;
+}
+.diag-card-sub{
+  font-size:.68rem;color:rgba(242,237,228,.4);margin-top:4px;letter-spacing:.05em;
+}
+.diag-card-arrow{
+  font-family:'Cinzel',serif;font-size:.7rem;color:var(--gold);
+  flex-shrink:0;transition:transform .3s;
+}
+.diag-card:hover .diag-card-arrow{transform:translateX(4px);}
+.diag-stars{
+  position:absolute;top:8px;right:12px;
+  font-size:.55rem;color:rgba(201,168,76,.4);letter-spacing:3px;
+}
+@media(max-width:768px){
+  .diag-card{padding:16px 20px;gap:14px;}
+  .diag-card-icon{font-size:1.6rem;}
+  .diag-card-title{font-size:.82rem;white-space:nowrap;}
+}
+
+.btn-diag{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.2em;color:var(--gold);background:transparent;border:1px solid rgba(201,168,76,.5);padding:14px 34px;cursor:pointer;text-decoration:none;text-transform:uppercase;transition:all .3s;display:inline-block;min-width:260px;text-align:center;}
+.btn-diag:hover{background:rgba(201,168,76,.08);border-color:var(--gold);transform:translateY(-2px);}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s;}
 nav.solid{background:rgba(6,6,6,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.1);}
@@ -78,9 +138,9 @@ nav.solid{background:rgba(6,6,6,.96);backdrop-filter:blur(12px);border-bottom:1p
 .nav-links a{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.22em;color:rgba(242,237,228,.55);text-decoration:none;text-transform:uppercase;transition:color .3s;}
 .nav-links a:hover{color:var(--gold);}
 .nav-tel{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--silver);letter-spacing:.1em;text-decoration:none;}
-.nav-diag{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.1em;color:var(--gold);background:transparent;padding:10px 12px;border:1px solid rgba(201,168,76,.42);text-decoration:none;text-transform:uppercase;transition:all .3s;white-space:nowrap;}
+.nav-diag{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.1em;color:var(--gold);background:transparent;padding:0 12px;border:1px solid rgba(201,168,76,.42);text-decoration:none;text-transform:uppercase;transition:all .3s;white-space:nowrap;height:38px;box-sizing:border-box;display:inline-flex;align-items:center;}
 .nav-diag:hover{border-color:var(--gold);background:rgba(201,168,76,.08);}
-.nav-reserve{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.25em;color:var(--black);background:linear-gradient(135deg,var(--gold-l),var(--gold));padding:10px 22px;text-decoration:none;text-transform:uppercase;transition:all .3s;white-space:nowrap;}
+.nav-reserve{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.25em;color:var(--black);background:linear-gradient(135deg,var(--gold-l),var(--gold));padding:0 22px;text-decoration:none;text-transform:uppercase;transition:all .3s;white-space:nowrap;height:38px;box-sizing:border-box;display:inline-flex;align-items:center;}
 .nav-reserve:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(201,168,76,.35);}
 @media(max-width:768px){nav{padding:14px 20px;}.nav-links{display:none;}}
 
@@ -481,6 +541,16 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
     <p class="hero-sub">SHISHA BAR</p>
     <p class="hero-catch">盡享水煙與美酒<br>專屬成年人的精緻秘境</p>
     <div class="hero-btns">
+      <a href="https://stella-bar.github.io/website/FlavorHoroscope.html" class="diag-card" target="_blank" style="margin-bottom:16px;">
+      <span class="diag-stars">★ ★ ★</span>
+      <div class="diag-card-icon">🔮</div>
+      <div class="diag-card-body">
+        <div class="diag-card-label">Shisha Diagnosis</div>
+        <div class="diag-card-title">占卜你命中注定的水煙</div>
+        <div class="diag-card-sub">星辰指引，專屬你的個性口味診斷</div>
+      </div>
+      <div class="diag-card-arrow">→</div>
+    </a>
       <a href="https://airrsv.net/stella-bar/calendar" class="btn-gold" target="_blank">💬 立即預約</a>
       <button class="btn-outline" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'});">查看菜單</button>
     </div>
@@ -490,7 +560,6 @@ footer{background:var(--black);padding:36px 48px;border-top:1px solid rgba(255,2
   </div>
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-bar"></div></div>
 </section>
-
 
 
 <!-- ② ATMOSPHERE -->
